@@ -1,3 +1,6 @@
-function main()
-  print("Hello World! 你好世界!")
-end
+mod_player = {
+  login = function()
+    print("mod_player.login()")
+  end
+}
+

@@ -26,11 +26,10 @@ int main (int argc, char *argv[])
     if (c == 'r')
       luaL_dofile(ls, "test.lua");
 
-    lua_getglobal(ls, "main");
-
+    lua_getglobal(ls, "mod_player");
+    lua_getfield(ls, -1, "login");
     lua_call(ls, 0, 1);
-
-    lua_pop(ls, 1);
+    lua_pop(ls, 2);
 
     printf("> ");
   }
