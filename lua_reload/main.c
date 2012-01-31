@@ -15,7 +15,7 @@ int main (int argc, char *argv[])
 
   luaL_openlibs(ls);
 
-  luaL_dofile(ls, "test.lua");
+  luaL_dofile(ls, "main.lua");
 
   printf("> ");
 
@@ -24,7 +24,7 @@ int main (int argc, char *argv[])
       continue;
     
     if (c == 'r')
-      luaL_dofile(ls, "test.lua");
+      luaL_dofile(ls, "main.lua");
 
     lua_getglobal(ls, "mod_player");
     lua_getfield(ls, -1, "login");
